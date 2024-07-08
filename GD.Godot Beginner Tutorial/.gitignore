@@ -1,2 +1,6 @@
+/[Bb]uild/
+/[Bb]uilds/
+
+
 # Godot 4+ specific ignores
 .godot/

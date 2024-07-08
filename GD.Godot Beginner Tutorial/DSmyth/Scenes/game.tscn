@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://bytiscpflm1wa"]
+[gd_scene load_steps=16 format=3 uid="uid://bytiscpflm1wa"]
 
+[ext_resource type="Script" path="res://DSmyth/Scripts/GameManger.gd" id="1_1jqs2"]
 [ext_resource type="PackedScene" uid="uid://fupqhs0frkn" path="res://DSmyth/Scenes/player.tscn" id="1_kc0mu"]
 [ext_resource type="Texture2D" uid="uid://bknyobc8aui0v" path="res://DSmyth/Creative Assets/Sprites/world_tileset.png" id="2_8pe1u"]
 [ext_resource type="PackedScene" uid="uid://b3hn6mxw3lt2u" path="res://DSmyth/Scenes/killzone.tscn" id="2_h1gb5"]
+[ext_resource type="FontFile" uid="uid://csh7ayb25hs1" path="res://DSmyth/Creative Assets/Fonts/PixelOperator8-Bold.ttf" id="2_sv8fg"]
 [ext_resource type="PackedScene" uid="uid://c1syffjo1a4tj" path="res://DSmyth/Scenes/platform.tscn" id="3_geyn5"]
 [ext_resource type="PackedScene" uid="uid://bv6jhqitxs8xl" path="res://DSmyth/Scenes/coin.tscn" id="4_kjhln"]
 [ext_resource type="PackedScene" uid="uid://dt0scuhlfrd7w" path="res://DSmyth/Scenes/slime.tscn" id="6_tmfv5"]
@@ -450,6 +452,20 @@ _data = {
 }
 
 [node name="Game" type="Node2D"]
+
+[node name="GameManger" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_1jqs2")
+
+[node name="Lbl-Score" type="Label" parent="GameManger"]
+offset_left = -52.0
+offset_top = -71.0
+offset_right = 62.0
+offset_bottom = -63.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_sv8fg")
+theme_override_font_sizes/font_size = 8
+text = "You Have X Coins"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_408gk")
